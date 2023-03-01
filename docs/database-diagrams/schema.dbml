@@ -1,0 +1,109 @@
+Table users {
+  id int
+  name string
+  email string
+  email_secondary string [null]
+  password string
+  password_reset_token string [null]
+  bio string [null]
+}
+
+Table roles {
+  id int
+  name string
+  project_id int [
+    ref: > projects.id,
+    null,
+    note: "Null means a pre-defined general role"
+  ]
+}
+
+Table role_permissions {
+  role_id int [ref: > roles.id]
+  permission_key int
+}
+
+Table projects {
+  id int
+  name string
+  creator_id int [ref: > users.id]
+}
+
+Table project_users {
+  user_id int [ref: > users.id]
+  project_id int [ref: > projects.id]
+}
+
+Table project_user_roles {
+  project_id int [ref: > projects.id]
+  user_id int [ref: > users.id]
+  role_id int [ref: > roles.id]
+}
+
+Table boards {
+  id int
+  name string
+  project_id int [ref: > projects.id]
+  creator_id int [ref: > users.id]
+}
+
+Table board_users {
+  board_id int [ref: > boards.id]
+  user_id int [ref: > users.id]
+}
+
+Table tasks {
+  id int
+  parent_id int [ref: > tasks.id, null]
+  name string
+  description string [null]
+  deadline datetime [null]
+  board_id int [ref: > boards.id]
+  status tinyint
+  creator_id int [ref: > users.id]
+}
+
+Table comments {
+  id int
+  commentable_type string
+  commentable_id int
+  creator_id int [ref: > users.id]
+  content text
+}
+
+Table tasks_users {
+  task_id int [ref: > tasks.id]
+  user_id int [ref: > users.id]
+}
+
+Table reports {
+  id int
+  project_id int [ref: > projects.id]
+  statut tinyint
+  creator_id int [ref: > users.id]
+}
+
+Table files {
+  id int
+  filable_type string
+  filable_id id
+  url string
+}
+
+Table predefined_texts {
+  id int
+  content string [
+    note: "Your {task.name} has been updated."
+  ]
+  language string
+}
+
+Table notifications {
+  id int
+  user_id int [ref: > users.id]
+  resource_type string
+  resource_id int
+  predefined_text_id int
+  // type tinyint [note: "Determines the content of notification based-on the resource"]
+  seen_at timestamp [null]
+}

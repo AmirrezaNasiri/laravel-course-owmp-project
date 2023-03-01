@@ -1,0 +1,1444 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "lastModifiedDate" : "2023-02-27T15:27:54Z",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICBtb2RlbCB7CiAgICBndWVzdCA9IHBlcnNvbiAiR3Vlc3QiCiAgICB1c2VyID0gcGVyc29uICJWZXJpZmllZCBVc2VyIgogICAgCiAgICBlbWFpbEluYm94ID0gc29mdHdhcmVTeXN0ZW0gIkVtYWlsIFByb3ZpZGVyIiAiVXNlcidzIGVtYWlsIGluYm94IiB7CiAgICAgIHRhZ3MgIkV4dGVybmFsIFN5c3RlbSIKICAgIH0KICAgIAogICAgc3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIk9ubGluZSBXb3JrIE1hbmFnbWVudCBQbGF0Zm9ybSIgewogICAgICBkYXRhYmFzZSA9IGNvbnRhaW5lciAiRGF0YWJhc2UiICJTdG9yZXMgc3lzdGVtIGRhdGEiIHsKICAgICAgICB0ZWNobm9sb2d5ICJNeXNxbCIKICAgICAgICB0YWdzICJEYXRhYmFzZSIKICAgICAgfQoKICAgICAgZmlsZVN0b3JhZ2UgPSBjb250YWluZXIgIkZpbGUgU3RvcmFnZSIgIlN0b3JlcyB1cGxvZGVkIGZpbGVzIiB7CiAgICAgICAgdGVjaG5vbG9neSAiUzMiCiAgICAgIH0KCiAgICAgIHJlZGlzID0gY29udGFpbmVyICJSZWRpcyIgIlN0b3JlcyBkYXRhIGluIG1lbW9yeSBmb3IgY2FjaGluZyBhbmQgbWFzc2FnaW5nIHB1cnBvc2UiIHsKICAgICAgICB0ZWNobm9sb2d5ICJSZWRpcyIKICAgICAgICB0YWdzICJEYXRhYmFzZSIKICAgICAgfQoKICAgICAgc29rZXRpID0gY29udGFpbmVyICJTb2tldGkiICJBIHNpbXBsZSB3ZWItc29ja2V0IHNlcnZlciB0byBzZW5kIHB1c2ggbm90aWZpY2F0aW9ucyIgewogICAgICAgIC0+IHJlZGlzICJXYXRjaGVzIGZvciBub3RpZmljYXRpb24gbWVzc2FnZXMiCiAgICAgICAgLT4gdXNlciAiUHVzaCBub3RpZmljYXRpb24gbWVzc2FnZXMiCiAgICAgIH0KCiAgICAgIGFwaVN5c3RlbSA9IGNvbnRhaW5lciAiQVBJIFN5c3RlbSIgIlByb3ZpZGVzIGJ1c2luZXNzIGxvZ2ljIGFuZCBpbnRlcmFjdGlvbiBBUElzIiB7CiAgICAgICAgZW1haWxTZXJ2aWNlID0gY29tcG9uZW50ICJFbWFpbCBTZXJ2aWNlIiB7CiAgICAgICAgICAtPiBlbWFpbEluYm94ICJTZW5kIGVtYWlscyIKICAgICAgICB9CgogICAgICAgIGV2ZW50QnVzID0gY29tcG9uZW50ICJFdmVudCBCdXMiCgogICAgICAgIG5vdGlmaWNhdGlvbk1hbmFnZXIgPSBjb21wb25lbnQgIk5vdGlmaWNhdGlvbiBNYW5hZ2VyIiB7CiAgICAgICAgICAtPiBlbWFpbEluYm94ICJTZW5kcyBub3RpZmljYXRpb24gZW1haWxzIgogICAgICAgICAgLT4gcmVkaXMgIlN0b3JlcyBwdXNoIG5vdGlmaWNhdGlvbiBtZXNzYWdlcyIKICAgICAgICB9CgogICAgICAgIGF1dGhTZXJ2aWNlID0gY29tcG9uZW50ICJBdXRoZW50aWNhdGlvbiBTZXJ2aWNlIiB7CiAgICAgICAgICAtPiBkYXRhYmFzZSAiU3RvcmUvcmV0cmlldmUgdXNlciBpbmZvcm1hdGlvbiIKICAgICAgICAgIC0+IGVtYWlsU2VydmljZSAiU2VuZCB2ZXJpZmljYXRpb24gZW1haWwiCiAgICAgICAgICAtPiBldmVudEJ1cyAiSWYgdGhlIHJlcXVlc3QgY29udGFpbnMgaW52aXRhdGlvbiBpZGVudGl0eSwgYWRkIHRoZW0gdG8gdGhlIHByb2plY3QgKERpc3BhdGNoZXMgdmlhIGV2ZW50KSIKICAgICAgICB9CgogICAgICAgIGFjY291bnRTZXJ2aWNlID0gY29tcG9uZW50ICJBY2NvdW50IFNlcnZpY2UiIHsKICAgICAgICAgIC0+IGRhdGFiYXNlICJVcGRhdGUgdXNlciBpbmZvcm1hdGlvbiIKICAgICAgICAgIC0+IGVtYWlsU2VydmljZSAiU2VuZCB2ZXJpZmljYXRpb24gZW1haWwiCiAgICAgICAgfQoKICAgICAgICBvdXRwdXRHZW5lcmF0b3JTZXJ2aWNlID0gY29tcG9uZW50ICJQcm9qZWN0IEV4cG9ydGVyIFNlcnZpY2UiIHsKICAgICAgICAgIC0+IGZpbGVTdG9yYWdlICJVcGxvYWQgZ2VuZXJhdGVkIGZpbGVzIgogICAgICAgIH0KCiAgICAgICAgZ3JvdXAgIlByb2plY3QgQ29tcG9uZW50cyIgewogICAgICAgICAgcHJvamVjdElhbVNlcnZpY2UgPSBjb21wb25lbnQgIlByb2plY3QgSUFNIFNlcnZpY2UiIHsKICAgICAgICAgICAgLT4gZGF0YWJhc2UgIlJldHJpZXZlcyByZXNvdXJjZXMiCiAgICAgICAgICAgIC0+IGRhdGFiYXNlICJNb2RpZmllcyBwcm9qZWN0IHJvbGVzIgogICAgICAgICAgICAtPiBkYXRhYmFzZSAiTW9kaWZpZXMgdXNlcnMgYWNjZXNzIgogICAgICAgICAgICAtPiBwcm9qZWN0SWFtU2VydmljZSAiQXV0aG9yaXplcyBhY2Nlc3MgdG8gSUFNIG1vZGlmaWNhdGlvbnMiCiAgICAgICAgICAgIC0+IG5vdGlmaWNhdGlvbk1hbmFnZXIgIlNlbmRzIGludml0YXRpb24gZW1haWwgd2l0aCBhIHNpZ25lZCBVUkwiCiAgICAgICAgICAgIC0+IGV2ZW50QnVzICJMaXN0ZW5zIHRvIHByb2plY3QgaW52aXRhdGlvbiBldmVudHMiCiAgICAgICAgICB9CgogICAgICAgICAgcHJvamVjdEFuYWx5emVyU2VydmljZSA9IGNvbXBvbmVudCAiUHJvamNldCBBbmFseXplciBTZXJ2aWNlIiAiUHJvdmlkZXMgYW5hbHlzaXMgcmVwb3J0cyBhYm91dCBhbiBzcGVjaWZpYyBwcm9qZWN0IiB7CiAgICAgICAgICAgIC0+IGRhdGFiYXNlICJQcmVwYXJlcyBkZXNpcmVkIHJlcG9ydCIKICAgICAgICAgICAgLT4gb3V0cHV0R2VuZXJhdG9yU2VydmljZSAiR2VuZXJhdGVzIG91dHB1dHMiCiAgICAgICAgICAgIC0+IHByb2plY3RJYW1TZXJ2aWNlICJBdXRob3JpemVzIGFjY2VzcyIKICAgICAgICAgICAgLT4gbm90aWZpY2F0aW9uTWFuYWdlciAiTm90aWZpZXMgdXNlciIKICAgICAgICAgIH0KCiAgICAgICAgICBwcm9qZWN0U2VydmljZSA9IGNvbXBvbmVudCAiUHJvamVjdCBTZXJ2aWNlIiAiTWFuYWdlcyBwcm9qZWN0IGVudGl0eSIgewogICAgICAgICAgICAtPiBkYXRhYmFzZSAiUmV0cmlldmVzIG9yIG1vZGlmaWVzIGEgcHJvamVjdCIKICAgICAgICAgICAgLT4gcHJvamVjdElhbVNlcnZpY2UgIkF1dGhvcml6ZXMgYWNjZXNzIgogICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgZ3JvdXAgIkJvYXJkIENvbXBvbmVudHMiIHsKICAgICAgICAgIGJvYXJkSWFtU2VydmljZSA9IGNvbXBvbmVudCAiUHJvamVjdCBCb2FyZCBJQU0gU2VydmljZSIgewogICAgICAgICAgICAtPiBkYXRhYmFzZSAiUmV0cmlldmVzIHJlc291cmNlcyIKICAgICAgICAgICAgLT4gZGF0YWJhc2UgIk1vZGlmaWVzIHByb2plY3QgdXNlcnMgYWNjZXNzIgogICAgICAgICAgICAtPiBib2FyZElhbVNlcnZpY2UgIkF1dGhvcml6ZXMgYWNjZXNzIHRvIElBTSBtb2RpZmljYXRpb25zIgogICAgICAgICAgICAtPiBwcm9qZWN0SWFtU2VydmljZSAiQXV0aG9yaXplcyBhY2Nlc3MgdG8gSUFNIG1vZGlmaWNhdGlvbnMiCiAgICAgICAgICAgIC0+IG5vdGlmaWNhdGlvbk1hbmFnZXIgIk5vdGlmaWVzIHVzZXIiCiAgICAgICAgICB9CgogICAgICAgICAgYm9hcmRTZXJ2aWNlID0gY29tcG9uZW50ICJCb2FyZCBTZXJ2aWNlIiB7CiAgICAgICAgICAgIC0+IGRhdGFiYXNlICJSZXRyaWV2ZXMgb3IgbW9kaWZpZXMgYSBwcm9qZWN0IGJvYXJkIgogICAgICAgICAgICAtPiBib2FyZElhbVNlcnZpY2UgIkF1dGhvcml6ZXMgYWNjZXNzIgogICAgICAgICAgfSAgICAgICAgICAKICAgICAgICB9CgogICAgICAgIGdyb3VwICJUYXNrIENvbXBvbmVudHMiIHsKICAgICAgICAgIHRhc2tJYW1TZXJ2aWNlID0gY29tcG9uZW50ICJCb2FyZCBUYXNrIElBTSBTZXJ2aWNlIiB7CiAgICAgICAgICAgIC0+IGRhdGFiYXNlICJSZXRyaWV2ZXMgcmVzb3VyY2VzIgogICAgICAgICAgICAtPiBib2FyZElhbVNlcnZpY2UgIkF1dGhvcml6ZXMgYWNjZXNzIHRvIHRoZSBib2FyZCBhbmQgcHJvamVjdCIKICAgICAgICAgIH0KCiAgICAgICAgICB0YXNrU2VydmljZSA9IGNvbXBvbmVudCAiVGFzayBTZXJ2aWNlIiB7CiAgICAgICAgICAgIC0+IGRhdGFiYXNlICJSZXRyaWV2ZXMgb3IgbW9kaWZpZXMgYSBib2FyZCB0YXNrIgogICAgICAgICAgICAtPiB0YXNrSWFtU2VydmljZSAiQXV0aG9yaXplcyBhY2Nlc3MiCiAgICAgICAgICAgIC0+IG5vdGlmaWNhdGlvbk1hbmFnZXIgIk5vdGlmaWVzIG90aGVyIG1lbWJlcnMgaW4gY2FzZSBvZiBtZW50aW9uLCBhc2lnbm1lbnQsIGRlYWRsaW5lIGFuZCBldGMuIgogICAgICAgICAgfSAgCiAgICAgICAgfQogICAgICB9CiAgICB9CgogICAgIyBBdXRoZW50aWNhdGlvbgogICAgZ3Vlc3QgLT4gYXV0aFNlcnZpY2UgIlNpZ25zLXVwIGFuZCBzaWducy1pbiIKICAgIGd1ZXN0IC0+IGF1dGhTZXJ2aWNlICJWZXJpZmllcyBlbWFpbCB2aWEgYSBsaW5rIgogICAgZ3Vlc3QgLT4gYXV0aFNlcnZpY2UgIk1ha2VzIGEgcGFzc3dvcmQgcmVzZXQgcmVxdWVzdCIKICAgIGd1ZXN0IC0+IGVtYWlsSW5ib3ggIlJlYWRzIHRoZSB2ZXJpZmljYXRpb24gZW1haWwiCgogICAgIyBQcm9maWxlCiAgICB1c2VyIC0+IGFjY291bnRTZXJ2aWNlICJVcGRhdGUgYWNjb3VudCBpbmZvcm1hdGlvbiIKCiAgICAjIFByb2plY3QKICAgIHVzZXIgLT4gcHJvamVjdFNlcnZpY2UgIlJldHJpZXZlcyBvciB1cHNlcnRzIHByb2plY3RzIiAgCiAgICB1c2VyIC0+IHByb2plY3RBbmFseXplclNlcnZpY2UgIlJlcXVlc3RzIGEgcmVwb3J0IGFuYWx5c2lzIgogICAgdXNlciAtPiBwcm9qZWN0SWFtU2VydmljZSAiSW52aXRlcyBhIHVzZXIgdG8gdGhlIHByb2plY3QiCiAgICB1c2VyIC0+IHByb2plY3RJYW1TZXJ2aWNlICJNYW5hZ2VzIHByb2plY3Qgcm9sZXMiCiAgICB1c2VyIC0+IHByb2plY3RJYW1TZXJ2aWNlICJNYW5hZ2VzIHVzZXJzIGFjY2VzcyIKCiAgICAjIEJvYXJkcwogICAgdXNlciAtPiBib2FyZFNlcnZpY2UgIlJldHJpZXZlcyBvciB1cHNlcnRzIGEgYm9hcmQiCiAgICB1c2VyIC0+IGJvYXJkSWFtU2VydmljZSAiTWFuYWdlcyB1c2VycyBhY2Nlc3MiCgogICAgIyBUYXNrcwogICAgdXNlciAtPiB0YXNrU2VydmljZSAiUmV0cmlldmVzIG9yIHVwc2VydHMgYSB0YXNrIgogICAgdXNlciAtPiB0YXNrU2VydmljZSAiQ29tbWVudHMgYW5kIG1lbnRpb25zIG90aGVyIG1lbWJlcnMiCiAgICB1c2VyIC0+IHRhc2tTZXJ2aWNlICJNb2RpZmllcyBkZWFkbGluZSIKICAgIHVzZXIgLT4gdGFza1NlcnZpY2UgIkFzc2lnbnMgb3RoZXIgbWVtYmVycyIKICAgIAoKICB9CiAgdmlld3MgewogICAgc3lzdGVtbGFuZHNjYXBlICJTeXN0ZW1MYW5kc2NhcGUiIHsKICAgICAgaW5jbHVkZSAqCiAgICAgIGF1dG9MYXlvdXQKICAgIH0KICAgIAogICAgY29udGFpbmVyIHN5c3RlbSAic3lzdGVtLWNvbnRhaW5lcnMiIHsKICAgICAgaW5jbHVkZSAqCiAgICAgIGF1dG9sYXlvdXQKICAgIH0KCiAgICBjb21wb25lbnQgYXBpU3lzdGVtICJhdXRoZW50aWNhdGlvbi1zZXJ2aWNlIiB7CiAgICAgIGluY2x1ZGUgLT5hdXRoU2VydmljZS0+CiAgICAgIGF1dG9sYXlvdXQKICAgIH0KCiAgICBjb21wb25lbnQgYXBpU3lzdGVtICJhY2NvdW50LXNlcnZpY2UiIHsKICAgICAgaW5jbHVkZSAtPmFjY291bnRTZXJ2aWNlLT4KICAgICAgYXV0b2xheW91dAogICAgfQoKICAgIGNvbXBvbmVudCBhcGlTeXN0ZW0gInByb2plY3Qtc2VydmljZSIgewogICAgICBpbmNsdWRlIC0+cHJvamVjdFNlcnZpY2UtPiAtPnByb2plY3RBbmFseXplclNlcnZpY2UtPiAtPnByb2plY3RJYW1TZXJ2aWNlLT4KICAgICAgYXV0b2xheW91dAogICAgfQoKICAgIGNvbXBvbmVudCBhcGlTeXN0ZW0gImJvYXJkLXNlcnZpY2UiIHsKICAgICAgaW5jbHVkZSAtPmJvYXJkU2VydmljZS0+IC0+Ym9hcmRJYW1TZXJ2aWNlLT4KICAgICAgYXV0b2xheW91dAogICAgfQoKICAgIGNvbXBvbmVudCBhcGlTeXN0ZW0gInRhc2stc2VydmljZSIgewogICAgICBpbmNsdWRlIC0+dGFza1NlcnZpY2UtPiAtPnRhc2tJYW1TZXJ2aWNlLT4KICAgICAgYXV0b2xheW91dAogICAgfQoKICAgIGNvbXBvbmVudCBhcGlTeXN0ZW0gImRhdGFiYXNlLWluZ3Jlc3MiIHsKICAgICAgaW5jbHVkZSAtPmRhdGFiYXNlCiAgICAgIGF1dG9sYXlvdXQKICAgIH0KCiAgICBkeW5hbWljIGFwaVN5c3RlbSAidXBkYXRlLXByb2plY3QiICJVcGRhdGUgcHJvamVjdCBpbmZvcm1hdGlvbi4iIHsKICAgICAgdXNlciAtPiBwcm9qZWN0U2VydmljZSAiUmVxdWVzdCBhIHByb2plY3QgdG8gYmUgdXBkYXRlZCIKICAgICAgcHJvamVjdFNlcnZpY2UgLT4gZGF0YWJhc2UgIlJldHJpZXZlIHByb2plY3QgaW5mb3JtYXRpb24gZm9yIGZ1dHVyZSB1c2UiCiAgICAgIHByb2plY3RTZXJ2aWNlIC0+IHByb2plY3RJYW1TZXJ2aWNlICJDYW4gdXNlciB1cGRhdGUgdGhpcyByZXNvdXJjZT8iCiAgICAgIHByb2plY3RJYW1TZXJ2aWNlIC0+IHByb2plY3RTZXJ2aWNlICJZZXMiCiAgICAgIHByb2plY3RTZXJ2aWNlIC0+IGRhdGFiYXNlICJVcGRhdGUgaW5mb3JtYXRpb24iCiAgICAgIGF1dG9MYXlvdXQKICAgIH0KCiAgICBkeW5hbWljIGFwaVN5c3RlbSAiZ2VuZXJhdGUtcmVwb3J0LWZpbGVzIiAiR2VuZXJhdGUgYSBwcm9qZWN0LXNwZWNpZmljIHJlcG9ydCIgewogICAgICB1c2VyIC0+IHByb2plY3RBbmFseXplclNlcnZpY2UgIlJlcXVlc3QgYSByZXBvcnQiCiAgICAgIHByb2plY3RBbmFseXplclNlcnZpY2UgLT4gZGF0YWJhc2UgIlJldHJpZXZlIGJhc2ljIHByb2plY3QgaW5mbyIKICAgICAgcHJvamVjdEFuYWx5emVyU2VydmljZSAtPiBwcm9qZWN0SWFtU2VydmljZSAiQ2FuIHVzZXIgZ2VuZXJhdGUgdGhpcyByZXBvcnQ/IgogICAgICBwcm9qZWN0SWFtU2VydmljZSAtPiBwcm9qZWN0QW5hbHl6ZXJTZXJ2aWNlICJZZXMiCiAgICAgIHByb2plY3RBbmFseXplclNlcnZpY2UgLT4gZGF0YWJhc2UgIlByZXBhcmUgcmVwb3J0IGRhdGEgKERpc3BhdGNoIGFzIGEgcXVldWUpIgogICAgICBwcm9qZWN0QW5hbHl6ZXJTZXJ2aWNlIC0+IG91dHB1dEdlbmVyYXRvclNlcnZpY2UgIk9yZGVyIHRvIGdlbmVyYXRlIG91dHB1dCBmaWxlcyAoRGlzcGF0Y2ggYXMgYSBxdWV1ZSkiCiAgICAgIG91dHB1dEdlbmVyYXRvclNlcnZpY2UgLT4gZmlsZVN0b3JhZ2UgIlVwbG9hZCBnZW5lcmF0ZWQgZmlsZXMiCiAgICAgIHByb2plY3RBbmFseXplclNlcnZpY2UgLT4gbm90aWZpY2F0aW9uTWFuYWdlciAiTm90aWZ5IHVwbG9hZGVkIGZpbGVzIgogICAgICBhdXRvTGF5b3V0CiAgICB9CgogICAgZHluYW1pYyBhcGlTeXN0ZW0gImludml0ZS11c2VyLXRvLXByb2plY3QiICJJbnZpdGUgdXNlciB0byBwcm9qZWN0IiB7CiAgICAgIHVzZXIgLT4gcHJvamVjdElhbVNlcnZpY2UgIlJlcXVlc3QgYSB1c2VyIGludml0YXRpb24iCiAgICAgIHByb2plY3RJYW1TZXJ2aWNlIC0+IGRhdGFiYXNlICJSZXRyaWV2ZSBiYXNpYyB1c2VyIGluZm8gaWYgZXhpc3RzIgogICAgICBwcm9qZWN0SWFtU2VydmljZSAtPiBwcm9qZWN0SWFtU2VydmljZSAiQXV0aG9yaXplIGFjY2VzcyBmb3IgdGhpcyBhY3Rpb24iCiAgICAgIHByb2plY3RJYW1TZXJ2aWNlIC0+IHByb2plY3RJYW1TZXJ2aWNlICJHZW5lcmF0ZSBhIHNhZmUgYW5kIHRlbXBvcmFyeSBzaWduZWQtdXJsIGJhc2VkLW9uIHRoZWlyIGVtYWlsIGFuZCB0aGUgcHJvamVjdCBpZCIKICAgICAgcHJvamVjdElhbVNlcnZpY2UgLT4gbm90aWZpY2F0aW9uTWFuYWdlciAiU2VuZCBlbWFpbCB3aXRoIHByZWZlcmVkIG1lc3NhZ2UiCiAgICAgIAogICAgICBndWVzdCAtPiBlbWFpbEluYm94ICJSZWFkIGludml0YXRpb24gZW1haWwiCiAgICAgIGd1ZXN0IC0+IGF1dGhTZXJ2aWNlICJTaWduaW4vc2lnbnVwIGFzIGEgdmVyaWZpZWQgdXNlciBpZiBub3QgYWxyZWFkeSBzaWduZWQtdXAiCiAgICAgIGF1dGhTZXJ2aWNlIC0+IGV2ZW50QnVzICJTZW5kIGFuIGV2ZW50IHRvIGFkZCB0aGUgdXNlciB0byB0aGUgcHJvamVjdCAoRGlzcGF0Y2hlcykiCiAgICAgIHByb2plY3RJYW1TZXJ2aWNlIC0+IGV2ZW50QnVzICJBZGQgdGhlIHVzZXIgdG8gdGhlIHByb2plY3QgKExpc3RlbnMpIgogICAgICBwcm9qZWN0SWFtU2VydmljZSAtPiBkYXRhYmFzZSAiR2l2ZSBhY2Nlc3MgdG8gdGhlIHVzZXIiCiAgICAgIGF1dG9MYXlvdXQKICAgIH0KCiAgICBkeW5hbWljIGFwaVN5c3RlbSAicHJvamVjdC1haW0tYWRkLXJvbGUiICJEZWZpbmUgYSBuZXcgcHJvamVjdCByb2xlIiB7CiAgICAgIHVzZXIgLT4gcHJvamVjdElhbVNlcnZpY2UgIlJlcXVlc3QgdG8gYWRkIGEgcm9sZSIKICAgICAgcHJvamVjdElhbVNlcnZpY2UgLT4gZGF0YWJhc2UgIlJldHJpZXZlcyB1c2VyIGFuZCBwcm9qZWN0IHJlc291cmNlcyIKICAgICAgcHJvamVjdElhbVNlcnZpY2UgLT4gcHJvamVjdElhbVNlcnZpY2UgIkF1dGhvcml6ZXMgdXNlcidzIGNhcGFiaWxpdHkgdG8gbWFuYWdlIHRoZSBwcm9qZWN0IHJvbGVzIgogICAgICBwcm9qZWN0SWFtU2VydmljZSAtPiBwcm9qZWN0SWFtU2VydmljZSAiQ29sbGVjdCBwcmUtZGVmaW5lZCBzeXN0ZW0gcGVybWlzc2lvbnMiCiAgICAgIHByb2plY3RJYW1TZXJ2aWNlIC0+IGRhdGFiYXNlICJBZGQgdGhlIG5ldyByb2xlIgogICAgICBhdXRvTGF5b3V0CiAgICB9CgogICAgZHluYW1pYyBhcGlTeXN0ZW0gImFkZC1wcm9qZWN0LW1lbWJlci10by1hLWJvYXJkIiAiQWRkIGEgcHJvamVjdCBtZW1iZXIgdG8gYSBib2FyZCIgewogICAgICB1c2VyIC0+IGJvYXJkSWFtU2VydmljZSAiUmVxdWVzdHMgdG8gYWRkIGEgdXNlciB0byBhIGJvYXJkIgogICAgICBib2FyZElhbVNlcnZpY2UgLT4gZGF0YWJhc2UgIlJldHJpZXZlcyB0aGUgdXNlcnMsIHByb2plY3QsIGFuZCBib2FyZCByZXNvdXJjZXMiCiAgICAgIGJvYXJkSWFtU2VydmljZSAtPiBwcm9qZWN0SWFtU2VydmljZSAiQXV0aG9yaXplcyByZXF1ZXN0ZXIncyBjYXBhYmlsaXR5IHRvIGFkZCBhIG5ldyBib2FyZCBtZW1iZXIiCiAgICAgIGJvYXJkSWFtU2VydmljZSAtPiBkYXRhYmFzZSAiQ2hlY2tzIGlmIHRoZSB0YXJnZXQgdXNlciBpcyBhIHByb2plY3QgbWVtYmVyIgogICAgICBib2FyZElhbVNlcnZpY2UgLT4gZGF0YWJhc2UgIkNoZWNrcyBpZiB0aGUgdGFyZ2V0IHVzZXIgaXMgbm90IGFscmVhZHkgYSBib2FyZCBtZW1iZXIiCiAgICAgIGJvYXJkSWFtU2VydmljZSAtPiBkYXRhYmFzZSAiR3JhbnRzIHRoZSBib2FyZCBhY2Nlc3MgdG8gdGhlIHRhcmdldCB1c2VyIgogICAgICBib2FyZElhbVNlcnZpY2UgLT4gbm90aWZpY2F0aW9uTWFuYWdlciAiTm90aWZpZXMgdGhlIHRhcmdldCB1c2VyIgogICAgICBhdXRvTGF5b3V0CiAgICB9CiAgIAogICAgdGhlbWUgZGVmYXVsdAogICAgCiAgICBzdHlsZXMgewogICAgICAgZWxlbWVudCAiRXh0ZXJuYWwgU3lzdGVtIiB7CiAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICB9CiAgICAgIAogICAgICBlbGVtZW50ICJEYXRhYmFzZSIgewogICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgIH0KICAgIH0KICB9Cn0K"
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "name" : "Guest",
+      "relationships" : [ {
+        "id" : "64",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "22",
+        "description" : "Signs-up and signs-in"
+      }, {
+        "id" : "65",
+        "sourceId" : "1",
+        "destinationId" : "12",
+        "description" : "Signs-up and signs-in",
+        "linkedRelationshipId" : "64"
+      }, {
+        "id" : "66",
+        "sourceId" : "1",
+        "destinationId" : "4",
+        "description" : "Signs-up and signs-in",
+        "linkedRelationshipId" : "64"
+      }, {
+        "id" : "67",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "22",
+        "description" : "Verifies email via a link"
+      }, {
+        "id" : "68",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "22",
+        "description" : "Makes a password reset request"
+      }, {
+        "id" : "69",
+        "tags" : "Relationship",
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Reads the verification email"
+      } ],
+      "location" : "Unspecified"
+    }, {
+      "id" : "2",
+      "tags" : "Element,Person",
+      "name" : "Verified User",
+      "relationships" : [ {
+        "id" : "70",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "27",
+        "description" : "Update account information"
+      }, {
+        "id" : "71",
+        "sourceId" : "2",
+        "destinationId" : "12",
+        "description" : "Update account information",
+        "linkedRelationshipId" : "70"
+      }, {
+        "id" : "72",
+        "sourceId" : "2",
+        "destinationId" : "4",
+        "description" : "Update account information",
+        "linkedRelationshipId" : "70"
+      }, {
+        "id" : "73",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "45",
+        "description" : "Retrieves or upserts projects"
+      }, {
+        "id" : "74",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "40",
+        "description" : "Requests a report analysis"
+      }, {
+        "id" : "75",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "33",
+        "description" : "Invites a user to the project"
+      }, {
+        "id" : "76",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "33",
+        "description" : "Manages project roles"
+      }, {
+        "id" : "77",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "33",
+        "description" : "Manages users access"
+      }, {
+        "id" : "78",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "54",
+        "description" : "Retrieves or upserts a board"
+      }, {
+        "id" : "79",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "48",
+        "description" : "Manages users access"
+      }, {
+        "id" : "80",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "60",
+        "description" : "Retrieves or upserts a task"
+      }, {
+        "id" : "81",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "60",
+        "description" : "Comments and mentions other members"
+      }, {
+        "id" : "82",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "60",
+        "description" : "Modifies deadline"
+      }, {
+        "id" : "83",
+        "tags" : "Relationship",
+        "sourceId" : "2",
+        "destinationId" : "60",
+        "description" : "Assigns other members"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "3",
+      "tags" : "Element,Software System,External System",
+      "name" : "Email Provider",
+      "description" : "User's email inbox",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "4",
+      "tags" : "Element,Software System",
+      "name" : "Online Work Managment Platform",
+      "relationships" : [ {
+        "id" : "11",
+        "sourceId" : "4",
+        "destinationId" : "2",
+        "description" : "Push notification messages",
+        "linkedRelationshipId" : "10"
+      }, {
+        "id" : "16",
+        "sourceId" : "4",
+        "destinationId" : "3",
+        "description" : "Send emails",
+        "linkedRelationshipId" : "14"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "7",
+        "tags" : "Element,Container,Database",
+        "name" : "Redis",
+        "description" : "Stores data in memory for caching and massaging purpose",
+        "technology" : "Redis",
+        "documentation" : { }
+      }, {
+        "id" : "5",
+        "tags" : "Element,Container,Database",
+        "name" : "Database",
+        "description" : "Stores system data",
+        "technology" : "Mysql",
+        "documentation" : { }
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container",
+        "name" : "Soketi",
+        "description" : "A simple web-socket server to send push notifications",
+        "relationships" : [ {
+          "id" : "9",
+          "tags" : "Relationship",
+          "sourceId" : "8",
+          "destinationId" : "7",
+          "description" : "Watches for notification messages"
+        }, {
+          "id" : "10",
+          "tags" : "Relationship",
+          "sourceId" : "8",
+          "destinationId" : "2",
+          "description" : "Push notification messages"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "6",
+        "tags" : "Element,Container",
+        "name" : "File Storage",
+        "description" : "Stores uploded files",
+        "technology" : "S3",
+        "documentation" : { }
+      }, {
+        "id" : "12",
+        "tags" : "Element,Container",
+        "name" : "API System",
+        "description" : "Provides business logic and interaction APIs",
+        "relationships" : [ {
+          "id" : "15",
+          "sourceId" : "12",
+          "destinationId" : "3",
+          "description" : "Send emails",
+          "linkedRelationshipId" : "14"
+        }, {
+          "id" : "21",
+          "sourceId" : "12",
+          "destinationId" : "7",
+          "description" : "Stores push notification messages",
+          "linkedRelationshipId" : "20"
+        }, {
+          "id" : "24",
+          "sourceId" : "12",
+          "destinationId" : "5",
+          "description" : "Store/retrieve user information",
+          "linkedRelationshipId" : "23"
+        }, {
+          "id" : "32",
+          "sourceId" : "12",
+          "destinationId" : "6",
+          "description" : "Upload generated files",
+          "linkedRelationshipId" : "31"
+        } ],
+        "components" : [ {
+          "id" : "18",
+          "tags" : "Element,Component",
+          "name" : "Notification Manager",
+          "relationships" : [ {
+            "id" : "19",
+            "tags" : "Relationship",
+            "sourceId" : "18",
+            "destinationId" : "3",
+            "description" : "Sends notification emails"
+          }, {
+            "id" : "20",
+            "tags" : "Relationship",
+            "sourceId" : "18",
+            "destinationId" : "7",
+            "description" : "Stores push notification messages"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "27",
+          "tags" : "Element,Component",
+          "name" : "Account Service",
+          "relationships" : [ {
+            "id" : "28",
+            "tags" : "Relationship",
+            "sourceId" : "27",
+            "destinationId" : "5",
+            "description" : "Update user information"
+          }, {
+            "id" : "29",
+            "tags" : "Relationship",
+            "sourceId" : "27",
+            "destinationId" : "13",
+            "description" : "Send verification email"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "48",
+          "tags" : "Element,Component",
+          "name" : "Project Board IAM Service",
+          "relationships" : [ {
+            "id" : "49",
+            "tags" : "Relationship",
+            "sourceId" : "48",
+            "destinationId" : "5",
+            "description" : "Retrieves resources"
+          }, {
+            "id" : "50",
+            "tags" : "Relationship",
+            "sourceId" : "48",
+            "destinationId" : "5",
+            "description" : "Modifies project users access"
+          }, {
+            "id" : "51",
+            "tags" : "Relationship",
+            "sourceId" : "48",
+            "destinationId" : "48",
+            "description" : "Authorizes access to IAM modifications"
+          }, {
+            "id" : "52",
+            "tags" : "Relationship",
+            "sourceId" : "48",
+            "destinationId" : "33",
+            "description" : "Authorizes access to IAM modifications"
+          }, {
+            "id" : "53",
+            "tags" : "Relationship",
+            "sourceId" : "48",
+            "destinationId" : "18",
+            "description" : "Notifies user"
+          } ],
+          "group" : "Board Components",
+          "size" : 0
+        }, {
+          "id" : "45",
+          "tags" : "Element,Component",
+          "name" : "Project Service",
+          "description" : "Manages project entity",
+          "relationships" : [ {
+            "id" : "46",
+            "tags" : "Relationship",
+            "sourceId" : "45",
+            "destinationId" : "5",
+            "description" : "Retrieves or modifies a project"
+          }, {
+            "id" : "47",
+            "tags" : "Relationship",
+            "sourceId" : "45",
+            "destinationId" : "33",
+            "description" : "Authorizes access"
+          } ],
+          "group" : "Project Components",
+          "size" : 0
+        }, {
+          "id" : "13",
+          "tags" : "Element,Component",
+          "name" : "Email Service",
+          "relationships" : [ {
+            "id" : "14",
+            "tags" : "Relationship",
+            "sourceId" : "13",
+            "destinationId" : "3",
+            "description" : "Send emails"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "17",
+          "tags" : "Element,Component",
+          "name" : "Event Bus",
+          "size" : 0
+        }, {
+          "id" : "33",
+          "tags" : "Element,Component",
+          "name" : "Project IAM Service",
+          "relationships" : [ {
+            "id" : "34",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "5",
+            "description" : "Retrieves resources"
+          }, {
+            "id" : "35",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "5",
+            "description" : "Modifies project roles"
+          }, {
+            "id" : "36",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "5",
+            "description" : "Modifies users access"
+          }, {
+            "id" : "37",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "33",
+            "description" : "Authorizes access to IAM modifications"
+          }, {
+            "id" : "38",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "18",
+            "description" : "Sends invitation email with a signed URL"
+          }, {
+            "id" : "39",
+            "tags" : "Relationship",
+            "sourceId" : "33",
+            "destinationId" : "17",
+            "description" : "Listens to project invitation events"
+          } ],
+          "group" : "Project Components",
+          "size" : 0
+        }, {
+          "id" : "54",
+          "tags" : "Element,Component",
+          "name" : "Board Service",
+          "relationships" : [ {
+            "id" : "55",
+            "tags" : "Relationship",
+            "sourceId" : "54",
+            "destinationId" : "5",
+            "description" : "Retrieves or modifies a project board"
+          }, {
+            "id" : "56",
+            "tags" : "Relationship",
+            "sourceId" : "54",
+            "destinationId" : "48",
+            "description" : "Authorizes access"
+          } ],
+          "group" : "Board Components",
+          "size" : 0
+        }, {
+          "id" : "30",
+          "tags" : "Element,Component",
+          "name" : "Project Exporter Service",
+          "relationships" : [ {
+            "id" : "31",
+            "tags" : "Relationship",
+            "sourceId" : "30",
+            "destinationId" : "6",
+            "description" : "Upload generated files"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "57",
+          "tags" : "Element,Component",
+          "name" : "Board Task IAM Service",
+          "relationships" : [ {
+            "id" : "58",
+            "tags" : "Relationship",
+            "sourceId" : "57",
+            "destinationId" : "5",
+            "description" : "Retrieves resources"
+          }, {
+            "id" : "59",
+            "tags" : "Relationship",
+            "sourceId" : "57",
+            "destinationId" : "48",
+            "description" : "Authorizes access to the board and project"
+          } ],
+          "group" : "Task Components",
+          "size" : 0
+        }, {
+          "id" : "22",
+          "tags" : "Element,Component",
+          "name" : "Authentication Service",
+          "relationships" : [ {
+            "id" : "23",
+            "tags" : "Relationship",
+            "sourceId" : "22",
+            "destinationId" : "5",
+            "description" : "Store/retrieve user information"
+          }, {
+            "id" : "25",
+            "tags" : "Relationship",
+            "sourceId" : "22",
+            "destinationId" : "13",
+            "description" : "Send verification email"
+          }, {
+            "id" : "26",
+            "tags" : "Relationship",
+            "sourceId" : "22",
+            "destinationId" : "17",
+            "description" : "If the request contains invitation identity, add them to the project (Dispatches via event)"
+          } ],
+          "size" : 0
+        }, {
+          "id" : "40",
+          "tags" : "Element,Component",
+          "name" : "Projcet Analyzer Service",
+          "description" : "Provides analysis reports about an specific project",
+          "relationships" : [ {
+            "id" : "41",
+            "tags" : "Relationship",
+            "sourceId" : "40",
+            "destinationId" : "5",
+            "description" : "Prepares desired report"
+          }, {
+            "id" : "42",
+            "tags" : "Relationship",
+            "sourceId" : "40",
+            "destinationId" : "30",
+            "description" : "Generates outputs"
+          }, {
+            "id" : "43",
+            "tags" : "Relationship",
+            "sourceId" : "40",
+            "destinationId" : "33",
+            "description" : "Authorizes access"
+          }, {
+            "id" : "44",
+            "tags" : "Relationship",
+            "sourceId" : "40",
+            "destinationId" : "18",
+            "description" : "Notifies user"
+          } ],
+          "group" : "Project Components",
+          "size" : 0
+        }, {
+          "id" : "60",
+          "tags" : "Element,Component",
+          "name" : "Task Service",
+          "relationships" : [ {
+            "id" : "61",
+            "tags" : "Relationship",
+            "sourceId" : "60",
+            "destinationId" : "5",
+            "description" : "Retrieves or modifies a board task"
+          }, {
+            "id" : "62",
+            "tags" : "Relationship",
+            "sourceId" : "60",
+            "destinationId" : "57",
+            "description" : "Authorizes access"
+          }, {
+            "id" : "63",
+            "tags" : "Relationship",
+            "sourceId" : "60",
+            "destinationId" : "18",
+            "description" : "Notifies other members in case of mention, asignment, deadline and etc."
+          } ],
+          "group" : "Task Components",
+          "size" : 0
+        } ],
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemLandscapeViews" : [ {
+      "key" : "SystemLandscape",
+      "order" : 1,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "69"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "containerViews" : [ {
+      "softwareSystemId" : "4",
+      "key" : "system-containers",
+      "order" : 2,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "71"
+      }, {
+        "id" : "15"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "9"
+      }, {
+        "id" : "10"
+      }, {
+        "id" : "69"
+      } ],
+      "elements" : [ {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "componentViews" : [ {
+      "key" : "database-ingress",
+      "order" : 8,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "61"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "49"
+      } ],
+      "elements" : [ {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "45",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "57",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "60",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "40",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "account-service",
+      "order" : 4,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "70"
+      }, {
+        "id" : "29"
+      }, {
+        "id" : "28"
+      } ],
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "board-service",
+      "order" : 6,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "50"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "38"
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "57",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "authentication-service",
+      "order" : 3,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "26"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "68"
+      } ],
+      "elements" : [ {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "project-service",
+      "order" : 5,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "50"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "38"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "39"
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "45",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "40",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "key" : "task-service",
+      "order" : 7,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "containerId" : "12",
+      "externalContainerBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "82"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "80"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "81"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "49"
+      } ],
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "57",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "60",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "dynamicViews" : [ {
+      "description" : "Add a project member to a board",
+      "key" : "add-project-member-to-a-board",
+      "order" : 13,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "12",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "79",
+        "description" : "Requests to add a user to a board",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "49",
+        "description" : "Retrieves the users, project, and board resources",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "52",
+        "description" : "Authorizes requester's capability to add a new board member",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "49",
+        "description" : "Checks if the target user is a project member",
+        "order" : "4",
+        "response" : false
+      }, {
+        "id" : "49",
+        "description" : "Checks if the target user is not already a board member",
+        "order" : "5",
+        "response" : false
+      }, {
+        "id" : "49",
+        "description" : "Grants the board access to the target user",
+        "order" : "6",
+        "response" : false
+      }, {
+        "id" : "53",
+        "description" : "Notifies the target user",
+        "order" : "7",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "description" : "Invite user to project",
+      "key" : "invite-user-to-project",
+      "order" : 11,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "12",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "75",
+        "description" : "Request a user invitation",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "34",
+        "description" : "Retrieve basic user info if exists",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "37",
+        "description" : "Authorize access for this action",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "37",
+        "description" : "Generate a safe and temporary signed-url based-on their email and the project id",
+        "order" : "4",
+        "response" : false
+      }, {
+        "id" : "38",
+        "description" : "Send email with prefered message",
+        "order" : "5",
+        "response" : false
+      }, {
+        "id" : "69",
+        "description" : "Read invitation email",
+        "order" : "6",
+        "response" : false
+      }, {
+        "id" : "64",
+        "description" : "Signin/signup as a verified user if not already signed-up",
+        "order" : "7",
+        "response" : false
+      }, {
+        "id" : "26",
+        "description" : "Send an event to add the user to the project (Dispatches)",
+        "order" : "8",
+        "response" : false
+      }, {
+        "id" : "39",
+        "description" : "Add the user to the project (Listens)",
+        "order" : "9",
+        "response" : false
+      }, {
+        "id" : "34",
+        "description" : "Give access to the user",
+        "order" : "10",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "description" : "Define a new project role",
+      "key" : "project-aim-add-role",
+      "order" : 12,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "12",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "75",
+        "description" : "Request to add a role",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "34",
+        "description" : "Retrieves user and project resources",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "37",
+        "description" : "Authorizes user's capability to manage the project roles",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "37",
+        "description" : "Collect pre-defined system permissions",
+        "order" : "4",
+        "response" : false
+      }, {
+        "id" : "34",
+        "description" : "Add the new role",
+        "order" : "5",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "description" : "Generate a project-specific report",
+      "key" : "generate-report-files",
+      "order" : 10,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "12",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "74",
+        "description" : "Request a report",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "41",
+        "description" : "Retrieve basic project info",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "43",
+        "description" : "Can user generate this report?",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "43",
+        "description" : "Yes",
+        "order" : "4",
+        "response" : true
+      }, {
+        "id" : "41",
+        "description" : "Prepare report data (Dispatch as a queue)",
+        "order" : "5",
+        "response" : false
+      }, {
+        "id" : "42",
+        "description" : "Order to generate output files (Dispatch as a queue)",
+        "order" : "6",
+        "response" : false
+      }, {
+        "id" : "31",
+        "description" : "Upload generated files",
+        "order" : "7",
+        "response" : false
+      }, {
+        "id" : "44",
+        "description" : "Notify uploaded files",
+        "order" : "8",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "40",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      } ]
+    }, {
+      "description" : "Update project information.",
+      "key" : "update-project",
+      "order" : 9,
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "elementId" : "12",
+      "externalBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "73",
+        "description" : "Request a project to be updated",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "46",
+        "description" : "Retrieve project information for future use",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "47",
+        "description" : "Can user update this resource?",
+        "order" : "3",
+        "response" : false
+      }, {
+        "id" : "47",
+        "description" : "Yes",
+        "order" : "4",
+        "response" : true
+      }, {
+        "id" : "46",
+        "description" : "Update information",
+        "order" : "5",
+        "response" : false
+      } ],
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "45",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "External System",
+          "background" : "#999999",
+          "color" : "#ffffff"
+        }, {
+          "tag" : "Database",
+          "shape" : "Cylinder"
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "lastSavedView" : "board-service"
+    }
+  }
+}
