@@ -19,9 +19,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('projects', function () {
-    $project = \App\Models\Project::make([
-        'name' => request('name')
+    $user = request()->user();
+
+    $project = \App\Models\Project::create([
+        'name' => request('name'),
+        'user_id' => $user->id
     ]);
 
     return $project;
 });
+
