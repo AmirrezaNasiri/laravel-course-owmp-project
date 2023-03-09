@@ -105,3 +105,10 @@
     - The response only includes $project1
 
 ### #### The response is empty if user doesn't have any project (Happy Path)
+
+### Feature: Signup
+#### User can signup (Happy Path)
+#### User can not signup if the email is invalid (empty, malformed)
+#### User can not signup if the password is invalid (empty, simple, too long)
+#### User can not signup with a duplicated email (TODO: the verified one)
+
