@@ -87,7 +87,7 @@ class SigninTest extends TestCase
 
         $response->assertUnprocessable()->assertJsonValidationErrorFor('email');
 
-        $this->markTestIncomplete();
+        $this->markTestSkipped();
     }
 
     public function test_user_can_not_signin_if_already_authorized()

@@ -14,7 +14,7 @@
 - Response: Get a failed response with a validation error
 - Side Effects: The user has no project presence in the database
 
-#### Doesn't create if the name is already created
+#### Doesn't create if the name is already created by hte user
 - Steps: Create a user, create a project with name `sample` for them and authenticate it, then send a HTTP request to /projects
 - Request: name=sample
 - Response: Get a failed response with a validation error

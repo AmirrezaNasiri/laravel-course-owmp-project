@@ -56,14 +56,23 @@ Route::middleware('guest')->post('/signup', function (Request $request) {
     return $user->createToken('personal')->plainTextToken;
 });
 
-Route::post('projects', function () {
-    $user = request()->user();
-
-    $project = \App\Models\Project::create([
-        'name' => request('name'),
-        'user_id' => $user->id
+Route::middleware('auth:sanctum')->post('projects', function () {
+    request()->validate([
+        'name' => [
+            'required',
+            'string',
+            'min:5',
+            'max:100',
+            \Illuminate\Validation\Rule::unique('projects', 'name')
+                ->where('creator_id', request()->user()->id)
+        ]
     ]);
 
-    return $project;
+    \App\Models\Project::create([
+        'name' => request('name'),
+        'creator_id' => request()->user()->id,
+    ]);
+
+    return '';
 });
 
