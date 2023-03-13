@@ -61,7 +61,7 @@ Route::middleware('auth:sanctum')->post('projects', function () {
         'name' => [
             'required',
             'string',
-            'min:5',
+            'min:4',
             'max:100',
             \Illuminate\Validation\Rule::unique('projects', 'name')
                 ->where('creator_id', request()->user()->id)
@@ -76,3 +76,22 @@ Route::middleware('auth:sanctum')->post('projects', function () {
     return '';
 });
 
+Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projectId) {
+    request()->validate([
+        'name' => [
+            'required',
+            'string',
+            'min:4',
+            'max:100',
+            \Illuminate\Validation\Rule::unique('projects', 'name')
+                ->where('creator_id', request()->user()->id)
+                ->ignore($projectId)
+        ]
+    ]);
+
+    request()->user()->projects()->findOrFail($projectId)->update([
+        'name' => request('name')
+    ]);
+
+    return '';
+});
