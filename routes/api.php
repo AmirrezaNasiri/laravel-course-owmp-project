@@ -103,3 +103,8 @@ Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projec
         'name' => $project->name
     ];
 });
+
+Route::middleware('auth:sanctum')->delete('projects/{projectId}', function ($projectId) {
+    $project = request()->user()->projects()->findOrFail($projectId);
+    $project->delete();
+});
