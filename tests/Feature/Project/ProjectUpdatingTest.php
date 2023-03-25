@@ -32,7 +32,10 @@ class ProjectUpdatingTest extends TestCase
         ]);
 
         # Assertion
-        $response->assertOk();
+        $response->assertOk()->assertJson([
+            'id' => $project->id,
+            'name' => 'New Name'
+        ]);
 
         $project->refresh();
 
@@ -55,7 +58,10 @@ class ProjectUpdatingTest extends TestCase
         ]);
 
         # Assertion
-        $response->assertOk();
+        $response->assertOk()->assertJson([
+            'id' => $project->id,
+            'name' => 'Alpha'
+        ]);;
 
         $project->refresh();
 

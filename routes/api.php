@@ -68,12 +68,15 @@ Route::middleware('auth:sanctum')->post('projects', function () {
         ]
     ]);
 
-    \App\Models\Project::create([
+    $project = \App\Models\Project::create([
         'name' => request('name'),
         'creator_id' => request()->user()->id,
     ]);
 
-    return '';
+    return [
+        'id' => $project->id,
+        'name' => $project->name
+    ];
 });
 
 Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projectId) {
@@ -89,9 +92,14 @@ Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projec
         ]
     ]);
 
-    request()->user()->projects()->findOrFail($projectId)->update([
+    $project = request()->user()->projects()->findOrFail($projectId);
+
+    $project->update([
         'name' => request('name')
     ]);
 
-    return '';
+    return [
+        'id' => $project->id,
+        'name' => $project->name
+    ];
 });

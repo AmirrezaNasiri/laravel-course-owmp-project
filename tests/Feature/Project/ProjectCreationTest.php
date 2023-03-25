@@ -29,7 +29,10 @@ class ProjectCreationTest extends TestCase
         ]);
 
         # Assertion
-        $response->assertOk();
+        $response->assertOk()->assertJson([
+            'id' => Project::first()->id,
+            'name' => 'Sample 1'
+        ]);
 
         self::assertEquals('Sample 1', $user->projects()->first()->name);
     }
