@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('ide-helper', function () {
+    Artisan::call('ide-helper:generate');
+    Artisan::call('ide-helper:models', ['--write-mixin']);
+    Artisan::call('ide-helper:meta');
+})->purpose('Write IDE helper metas');
