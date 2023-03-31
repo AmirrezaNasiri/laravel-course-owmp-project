@@ -56,6 +56,18 @@ Route::middleware('guest')->post('/signup', function (Request $request) {
     return $user->createToken('personal')->plainTextToken;
 });
 
+Route::middleware('auth:sanctum')->get('projects', function () {
+    return request()->user()->projects()->each->only([
+        'name', 'id'
+    ]);
+});
+
+Route::middleware('auth:sanctum')->get('projects/{$projectId}', function ($projectId) {
+    return request()->user()->projects()->findOrfail($projectId)->only([
+        'name', 'id'
+    ]);
+});
+
 Route::middleware('auth:sanctum')->post('projects', function () {
     request()->validate([
         'name' => [
