@@ -3,6 +3,7 @@
 namespace Project;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\Board;
 use App\Models\Project;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -21,6 +22,7 @@ class ProjectDeletingTest extends TestCase
         # Preparation
         $user = User::factory()->create();
         $project = Project::factory()->for($user, 'creator')->create();
+        Board::factory()->recycle($project)->recycle($project->creator)->create();
 
         $this->actingAs($user);
 
@@ -31,6 +33,7 @@ class ProjectDeletingTest extends TestCase
         $response->assertOk();
 
         self::assertEmpty(Project::count());
+        self::assertEmpty(Board::count());
     }
 
     public function test_user_can_not_delete_others_projects()
