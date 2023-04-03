@@ -1,6 +1,6 @@
 <?php
 
-namespace Board;
+namespace Task;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Models\Board;
@@ -14,46 +14,43 @@ use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 use function PHPUnit\Framework\assertEquals;
 
-class BoardDeletingTest extends TestCase
+class TaskDeletingTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_user_can_delete_a_board()
+    public function test_user_can_delete_a_task()
     {
-        $board = Board::factory()->create();
-
-        Task::factory()->recycle($board)->recycle($board->creator)->create();
+        $task = Task::factory()->create();
 
         $this
-            ->actingAs($board->creator)
-            ->deleteJson("/api/boards/{$board->id}")
+            ->actingAs($task->creator)
+            ->deleteJson("/api/tasks/{$task->id}")
             ->assertOk();
 
-        self::assertEmpty(Board::count());
         self::assertEmpty(Task::count());
     }
 
-    public function test_user_can_not_delete_others_boards()
+    public function test_user_can_not_delete_others_tasks()
     {
         $user = User::factory()->create();
-        $board = Board::factory()->create();
+        $task = Task::factory()->create();
 
         $this
             ->actingAs($user)
-            ->deleteJson("/api/boards/{$board->id}")
+            ->deleteJson("/api/tasks/{$task->id}")
             ->assertNotFound();
 
-        self::assertEquals(1, Board::count());
+        self::assertEquals(1, Task::count());
     }
 
     public function test_guess_can_not_delete_any_board()
     {
-        $board = Board::factory()->create();
+        $task = Task::factory()->create();
 
         $this
-            ->deleteJson("/api/boards/{$board->id}")
+            ->deleteJson("/api/tasks/{$task->id}")
             ->assertUnauthorized();
 
-        self::assertEquals(1, Board::count());
+        self::assertEquals(1, Task::count());
     }
 }
