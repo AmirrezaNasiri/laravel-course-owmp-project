@@ -42,6 +42,7 @@ class TaskCreationTest extends TestCase
         self::assertEquals('My Task', $task->name);
         self::assertEquals('This is a sample task.', $task->description);
         self::assertEquals('2025-01-01 00:00:00', $task->deadline->toDateTimeString());
+        self::assertEquals(TaskStatus::TODO, $task->status);
     }
 
     /**

@@ -118,5 +118,173 @@ Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projec
 
 Route::middleware('auth:sanctum')->delete('projects/{projectId}', function ($projectId) {
     $project = request()->user()->projects()->findOrFail($projectId);
+    $projet->tasks()->delete();
+    $project->boards()->delete();
     $project->delete();
+});
+
+
+Route::middleware('auth:sanctum')->post('boards', function () {
+    request()->validate([
+        'name' => [
+            'required',
+            'string',
+            'min:4',
+            'max:100',
+        ],
+        'project_id' => [
+            'required',
+            Rule::exists('projects', 'id')->where(function (Builder $query) {
+                return $query->where('creator_id', request()->user()->id);
+            }),
+        ]
+    ]);
+
+    $board = \App\Models\Board::create([
+        'project_id' => request('project_id')
+        'name' => request('name'),
+        'creator_id' => request()->user()->id,
+    ]);
+
+    return [
+        'id' => $project->id,
+        'name' => $project->name
+    ];
+});
+
+Route::middleware('auth:sanctum')->put('boards/{boardId}', function ($boardId) {
+    request()->validate([
+        'name' => [
+            'required',
+            'string',
+            'min:4',
+            'max:100',
+        ]
+    ]);
+
+    $board = request()->user()->boards()->findOrFail($boardId);
+
+    $board->update([
+        'name' => request('name')
+    ]);
+
+    return [
+        'id' => $board->id,
+        'name' => $board->name
+    ];
+});
+
+Route::middleware('auth:sanctum')->get('boards', function () {
+    return request()->user()->boards()->whereProjectId(request('project_id'))->each->only([
+        'name', 'id'
+    ]);
+});
+
+Route::middleware('auth:sanctum')->get('boards/{$boardId}', function ($boardId) {
+    return request()->user()->boards()->findOrfail($boardId)->only([
+        'name', 'id'
+    ]);
+});
+
+Route::middleware('auth:sanctum')->delete('boards/{boardId}', function ($boardId) {
+    $board = request()->user()->boards()->findOrFail($boardId);
+    $board->tasks()->delete();
+    $board->delete();
+});
+
+
+// Tasks
+Route::middleware('auth:sanctum')->post('tasks', function () {
+    request()->validate([
+        'name' => [
+            'required',
+            'string',
+            'min:4',
+            'max:100',
+        ],
+        'description' => [
+            'string',
+            'max:5000',
+        ],
+        'deadline' => [
+            'string',
+            'date',
+        ],
+        'board_id' => [
+            'required',
+            Rule::exists('boards', 'id')->where(function (Builder $query) {
+                return $query->where('creator_id', request()->user()->id);
+            }),
+        ]
+    ]);
+
+    $task = \App\Models\Task::create([
+        'board_id' => request('board_id'),
+        'name' => request('name'),
+        'description' => request('description'),
+        'deadline' => request('deadline'),
+        'creator_id' => request()->user()->id,
+        'status' => TaskStatus::TODO,
+    ]);
+
+    return [
+        'id' => $task->id,
+        'board_id' => $task->board->id,
+        'name' => $task->name,
+        'description' => $task->description,
+        'deadline' => $task->deadline,
+        'status' => $task->status,
+    ];
+});
+
+Route::middleware('auth:sanctum')->patch('tasks/{taskId}', function ($taskId) {
+    request()->validate([
+        'name' => [
+            'string',
+            'min:4',
+            'max:100',
+        ],
+        'description' => [
+            'string',
+            'max:5000',
+        ],
+        'deadline' => [
+            'string',
+            'date',
+        ],
+    ]);
+
+    $task = request()->user()->tasks()->findOrFail($taskId);
+
+    $task->update([
+        'name' => request()->has('name') ? request('name') : $task->name,
+        'description' => request()->has('description') ? request('description') : $task->description,
+        'deadline' => request()->has('deadline') ? request('deadline') : $task->deadline,
+    ]);
+
+    return [
+        'id' => $task->id,
+        'board_id' => $task->board->id,
+        'name' => $task->name,
+        'description' => $task->description,
+        'deadline' => $task->deadline,
+        'status' => $task->status,
+    ];
+});
+
+Route::middleware('auth:sanctum')->get('tasks', function () {
+    return request()->user()->boards()->whereId(request('board_id'))->get()->tasks()->each->only([
+        'name', 'id', 'description', 'deadline', 'status', 'board_id'
+    ]);
+});
+
+Route::middleware('auth:sanctum')->get('tasks/{taskId}', function ($taskId) {
+    return request()->user()->tasks()->findOrfail($taskId)->only([
+        'name', 'id', 'description', 'deadline', 'status', 'board_id'
+    ]);
+});
+
+Route::middleware('auth:sanctum')->delete('boards/{taskId}', function ($taskId) {
+    $task = request()->user()->tasks()->findOrFail($taskId);
+    $task->delete();
 });
