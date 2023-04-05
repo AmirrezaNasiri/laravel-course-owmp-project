@@ -23,6 +23,8 @@ class BoardGettingTest extends TestCase
             'name' => 'Board Name'
         ]);
 
+        $this->withoutExceptionHandling();
+
         $this
             ->actingAs($board->creator)
             ->getJson("/api/boards/{$board->id}")

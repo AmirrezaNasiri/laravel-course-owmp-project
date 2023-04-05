@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('board_id')->constrained();
-            $table->foreignId('parent_id')->constrained('tasks')->nullable();
+            $table->foreignId('parent_id')->nullable()->constrained('tasks');
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('status');
-            $table->timestamp('deadline');
+            $table->dateTime('deadline')->nullable();
             $table->foreignId('creator_id')->constrained('users');
             $table->timestamps();
         });

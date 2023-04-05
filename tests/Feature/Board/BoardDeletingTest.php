@@ -12,7 +12,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
-use function PHPUnit\Framework\assertEquals;
 
 class BoardDeletingTest extends TestCase
 {
@@ -22,7 +21,7 @@ class BoardDeletingTest extends TestCase
     {
         $board = Board::factory()->create();
 
-        Task::factory()->recycle($board)->recycle($board->creator)->create();
+        Task::factory()->recycle($board->creator)->recycle($board)->create();
 
         $this
             ->actingAs($board->creator)

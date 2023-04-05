@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Enums\TaskStatus;
+use App\Models\Board;
 use App\Models\Project;
 use App\Models\Task;
 use App\Models\User;
@@ -22,7 +23,8 @@ class TaskFactory extends Factory
     {
         return [
             'creator_id' => User::factory(),
-            'task_id' => Task::factory(),
+            'parent_id' => null,
+            'board_id' => Board::factory(),
             'name' => fake()->name(),
             'description' => fake()->optional()->text(),
             'deadline' => fake()->optional()->dateTime(),

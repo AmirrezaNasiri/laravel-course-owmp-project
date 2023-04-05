@@ -22,6 +22,7 @@ class TaskDeletingTest extends TestCase
     {
         $task = Task::factory()->create();
 
+        $this->withoutExceptionHandling();
         $this
             ->actingAs($task->creator)
             ->deleteJson("/api/tasks/{$task->id}")

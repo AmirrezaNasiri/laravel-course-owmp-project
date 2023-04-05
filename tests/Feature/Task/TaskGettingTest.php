@@ -35,8 +35,9 @@ class TaskGettingTest extends TestCase
                 'id' => $task->id,
                 'name' => 'Task Name',
                 'description' => 'Sample description of task.',
-                'deadline' => '2030-01-01 00:00:00',
-                'status' => TaskStatus::TODO,
+                'deadline' => '2030-01-01T00:00:00.000000Z',
+                'status' => TaskStatus::TODO->value,
+                'board_id' => $task->board->id
             ]);
     }
 

@@ -20,7 +20,7 @@ class ProjectGettingTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $project = Project::factory()->forCreator($user)->create([
+        $project = Project::factory()->recycle($user)->create([
             'name' => 'Sample 1'
         ]);
 

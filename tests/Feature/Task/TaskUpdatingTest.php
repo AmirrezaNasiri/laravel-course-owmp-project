@@ -9,6 +9,7 @@ use App\Models\Task;
 use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
@@ -18,18 +19,21 @@ class TaskUpdatingTest extends TestCase
 {
     use RefreshDatabase;
 
-    public static function taskPatchProvider()
+    public static function taskFieldPatchProvider()
     {
         return [
             'a good description' => ['description', 'My new description.'],
             'empty description' => ['description', ''],
             'a new name' => ['name', 'My New Task'],
-            'a new deadline' => ['deadline', '2050-01-01 01:01:01'],
+            'a new deadline' => ['deadline', '2050-01-01 01:01:01', '2050-01-01T01:01:01.000000Z'],
             'empty deadline' => ['deadline', ''],
         ];
     }
 
-    public function test_user_can_update_a_task($field, $value)
+    /**
+     * @dataProvider taskFieldPatchProvider
+     */
+    public function test_user_can_update_a_task($field, $value, $expectedValue = null)
     {
         $oldValues = [
             'name' => 'My Old Task',
@@ -40,8 +44,10 @@ class TaskUpdatingTest extends TestCase
         $task = Task::factory()->create($oldValues);
 
         $expectedAttributes = [
-            ...$oldValues,
-            $field => $value
+            'name' => 'My Old Task',
+            'description' => 'My old description.',
+            'deadline' => '1999-01-01T00:00:00.000000Z',
+            $field => $expectedValue ?: $value
         ];
 
         $this
@@ -55,7 +61,10 @@ class TaskUpdatingTest extends TestCase
                 ...$expectedAttributes
             ]);
 
-        self::assertEquals($expectedAttributes, $task->only(array_keys($expectedAttributes)));
+        self::assertEquals(
+            $expectedAttributes,
+            Arr::only($task->fresh()->toArray(), array_keys($expectedAttributes))
+        );
     }
 
     public function test_user_can_update_board_even_if_the_name_does_not_change()
@@ -104,7 +113,7 @@ class TaskUpdatingTest extends TestCase
      */
     public function test_user_can_not_update_task_with_invalid_description($invalidDescription)
     {
-        $task = Board::factory()->create([
+        $task = Task::factory()->create([
             'description' => 'Old Description'
         ]);
 
@@ -124,7 +133,7 @@ class TaskUpdatingTest extends TestCase
      */
     public function test_user_can_not_update_task_with_invalid_deadline($invalidDeadline)
     {
-        $task = Board::factory()->create([
+        $task = Task::factory()->create([
             'deadline' => '2022-01-01 00:00:00'
         ]);
 
@@ -149,7 +158,7 @@ class TaskUpdatingTest extends TestCase
 
         $this
             ->actingAs($user)
-            ->putJson("/api/tasks/{$task->id}", [
+            ->patchJson("/api/tasks/{$task->id}", [
                 'name' => 'New Name',
             ])
             ->assertNotFound();

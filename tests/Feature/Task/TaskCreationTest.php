@@ -2,6 +2,7 @@
 
 namespace Task;
 
+use App\Enums\TaskStatus;
 use App\Models\Board;
 use App\Models\Project;
 use App\Models\Task;
@@ -34,7 +35,7 @@ class TaskCreationTest extends TestCase
                 'board_id' => $board->id,
                 'name' => 'My Task',
                 'description' => 'This is a sample task.',
-                'deadline' => '2025-01-01 00:00:00'
+                'deadline' => '2025-01-01T00:00:00.000000Z'
             ]);
 
         self::assertTrue($task->board()->is($board));
@@ -79,7 +80,7 @@ class TaskCreationTest extends TestCase
                 description: $invalidDescription
             )
             ->assertUnprocessable()
-            ->assertJsonValidationErrorFor('name');
+            ->assertJsonValidationErrorFor('description');
 
         self::assertFalse(Task::exists());
     }
@@ -105,14 +106,16 @@ class TaskCreationTest extends TestCase
 
     public function test_user_can_not_create_task_with_a_board_it_does_not_have_access()
     {
+        $user = User::factory()->create();
         $board = Board::factory()->create();
 
         $this
-            ->actingAs($board->creator)
+            ->actingAs($user)
             ->postValidJson(
                 board: $board,
             )
-            ->assertNotFound();
+            ->assertUnprocessable()
+            ->assertJsonValidationErrorFor('board_id');
 
         self::assertFalse(Task::exists());
     }
@@ -132,9 +135,9 @@ class TaskCreationTest extends TestCase
 
     private function postValidJson(
         Board $board,
-        string $name = 'My Task',
-        string $description = 'This is a sample task.',
-        string $deadline = '2025-01-01 00:00:00',
+        $name = 'My Task',
+        $description = 'This is a sample task.',
+        $deadline = '2025-01-01 00:00:00',
     )
     {
         return $this->postJson("/api/tasks", [

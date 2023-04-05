@@ -1,7 +1,12 @@
 <?php
 
+use App\Enums\TaskStatus;
+use App\Models\Task;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Validation\Rule;
+
 // use App\Models;
 /*
 |--------------------------------------------------------------------------
@@ -57,12 +62,12 @@ Route::middleware('guest')->post('/signup', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->get('projects', function () {
-    return request()->user()->projects()->each->only([
+    return request()->user()->projects()->get()->each->only([
         'name', 'id'
     ]);
 });
 
-Route::middleware('auth:sanctum')->get('projects/{$projectId}', function ($projectId) {
+Route::middleware('auth:sanctum')->get('projects/{projectId}', function ($projectId) {
     return request()->user()->projects()->findOrfail($projectId)->only([
         'name', 'id'
     ]);
@@ -75,7 +80,7 @@ Route::middleware('auth:sanctum')->post('projects', function () {
             'string',
             'min:4',
             'max:100',
-            \Illuminate\Validation\Rule::unique('projects', 'name')
+            Rule::unique('projects', 'name')
                 ->where('creator_id', request()->user()->id)
         ]
     ]);
@@ -98,7 +103,7 @@ Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projec
             'string',
             'min:4',
             'max:100',
-            \Illuminate\Validation\Rule::unique('projects', 'name')
+            Rule::unique('projects', 'name')
                 ->where('creator_id', request()->user()->id)
                 ->ignore($projectId)
         ]
@@ -118,7 +123,7 @@ Route::middleware('auth:sanctum')->put('projects/{projectId}', function ($projec
 
 Route::middleware('auth:sanctum')->delete('projects/{projectId}', function ($projectId) {
     $project = request()->user()->projects()->findOrFail($projectId);
-    $projet->tasks()->delete();
+    $project->tasks()->delete();
     $project->boards()->delete();
     $project->delete();
 });
@@ -131,6 +136,8 @@ Route::middleware('auth:sanctum')->post('boards', function () {
             'string',
             'min:4',
             'max:100',
+            Rule::unique('boards', 'name')
+                ->where('creator_id', request()->user()->id)
         ],
         'project_id' => [
             'required',
@@ -141,24 +148,31 @@ Route::middleware('auth:sanctum')->post('boards', function () {
     ]);
 
     $board = \App\Models\Board::create([
-        'project_id' => request('project_id')
+        'project_id' => request('project_id'),
         'name' => request('name'),
         'creator_id' => request()->user()->id,
     ]);
 
     return [
-        'id' => $project->id,
-        'name' => $project->name
+        'id' => $board->id,
+        'name' => $board->name
     ];
 });
 
 Route::middleware('auth:sanctum')->put('boards/{boardId}', function ($boardId) {
+    $board = \App\Models\Board::findOrFail($boardId);
+
     request()->validate([
         'name' => [
             'required',
             'string',
             'min:4',
             'max:100',
+            Rule::unique('boards', 'name')
+                ->where('creator_id', request()->user()->id)
+                ->where('project_id', $board->project_id)
+                ->ignore($boardId)
+
         ]
     ]);
 
@@ -175,12 +189,12 @@ Route::middleware('auth:sanctum')->put('boards/{boardId}', function ($boardId) {
 });
 
 Route::middleware('auth:sanctum')->get('boards', function () {
-    return request()->user()->boards()->whereProjectId(request('project_id'))->each->only([
+    return request()->user()->boards()->whereProjectId(request('project_id'))->get()->each->only([
         'name', 'id'
     ]);
 });
 
-Route::middleware('auth:sanctum')->get('boards/{$boardId}', function ($boardId) {
+Route::middleware('auth:sanctum')->get('boards/{boardId}', function ($boardId) {
     return request()->user()->boards()->findOrfail($boardId)->only([
         'name', 'id'
     ]);
@@ -218,7 +232,7 @@ Route::middleware('auth:sanctum')->post('tasks', function () {
         ]
     ]);
 
-    $task = \App\Models\Task::create([
+    $task = Task::create([
         'board_id' => request('board_id'),
         'name' => request('name'),
         'description' => request('description'),
@@ -245,10 +259,12 @@ Route::middleware('auth:sanctum')->patch('tasks/{taskId}', function ($taskId) {
             'max:100',
         ],
         'description' => [
+            'nullable',
             'string',
             'max:5000',
         ],
         'deadline' => [
+            'nullable',
             'string',
             'date',
         ],
@@ -273,7 +289,7 @@ Route::middleware('auth:sanctum')->patch('tasks/{taskId}', function ($taskId) {
 });
 
 Route::middleware('auth:sanctum')->get('tasks', function () {
-    return request()->user()->boards()->whereId(request('board_id'))->get()->tasks()->each->only([
+    return request()->user()->tasks()->whereBoardId(request('board_id'))->get()->each->only([
         'name', 'id', 'description', 'deadline', 'status', 'board_id'
     ]);
 });
@@ -284,7 +300,7 @@ Route::middleware('auth:sanctum')->get('tasks/{taskId}', function ($taskId) {
     ]);
 });
 
-Route::middleware('auth:sanctum')->delete('boards/{taskId}', function ($taskId) {
+Route::middleware('auth:sanctum')->delete('tasks/{taskId}', function ($taskId) {
     $task = request()->user()->tasks()->findOrFail($taskId);
     $task->delete();
 });

@@ -76,7 +76,8 @@ class BoardCreationTest extends TestCase
                 'project_id' => $project->id,
                 'name' => 'My Board'
             ])
-            ->assertNotFound();
+            ->assertUnprocessable()
+            ->assertJsonValidationErrorFor('project_id');
 
         self::assertFalse(Board::exists());
     }
@@ -84,7 +85,7 @@ class BoardCreationTest extends TestCase
     public function test_user_can_not_create_a_board_if_the_name_already_exists_in_the_project()
     {
         $project = Project::factory()->create();
-        Board::factory()->for($project)->create([
+        Board::factory()->recycle($project->creator)->recycle($project)->create([
             'name' => 'My Board'
         ]);
 
@@ -103,7 +104,7 @@ class BoardCreationTest extends TestCase
     {
         $user = User::factory()->create();
 
-        $projects = Project::factory()->count(2)->forCreator($user)->create();
+        $projects = Project::factory()->count(2)->recycle($user)->create();
 
         Board::factory()->for($projects[0])->create([
             'name' => 'My Board'
@@ -130,6 +131,6 @@ class BoardCreationTest extends TestCase
             ])
             ->assertUnauthorized();
 
-        self::assertEmpty(Project::count());
+        self::assertEmpty(Board::count());
     }
 }

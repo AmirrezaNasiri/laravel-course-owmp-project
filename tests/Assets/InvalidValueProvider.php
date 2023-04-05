@@ -33,8 +33,8 @@ class InvalidValueProvider
     {
         return [
             'non-string' => [ ['string'] ],
-            'invalid date 1' => '2020-01-01 90:90:90',
-            'invalid date 2' => 'some random string',
+            'invalid date 1' => ['2020-01-01 90:90:90'],
+            'invalid date 2' => ['some random string'],
         ];
     }
 }

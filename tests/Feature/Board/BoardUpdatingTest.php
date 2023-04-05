@@ -94,10 +94,10 @@ class BoardUpdatingTest extends TestCase
 
         $boards = Board::factory()
             ->count(2)
-            ->sequence([
+            ->sequence(
                 ['name' => 'Board Alpha'],
                 ['name' => 'Board Beta'],
-            ])
+            )
             ->recycle($project)
             ->recycle($project->creator)
             ->create();
@@ -119,10 +119,10 @@ class BoardUpdatingTest extends TestCase
 
         $boards = Board::factory()
             ->count(2)
-            ->sequence([
+            ->sequence(
                 ['name' => 'Board Alpha'],
                 ['name' => 'Board Beta'],
-            ])
+            )
             ->recycle($creator)
             ->create();
 

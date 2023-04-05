@@ -21,6 +21,7 @@ class BoardListingTest extends TestCase
     {
         $user = User::factory()->create();
 
+        $this->withoutExceptionHandling();
         // Create 2 boards for other users
         // Create 2 boards for same user but different projects
         // Create 2 boards for a specific project
@@ -31,10 +32,10 @@ class BoardListingTest extends TestCase
 
         $project = Project::factory()->recycle($user)->create();
 
-        $boards = Board::factory()->recycle($project)->recycle($user)->count(2)->sequence([
+        $boards = Board::factory()->recycle($project)->recycle($user)->count(2)->sequence(
             [ 'name' => 'Sample 1' ],
             [ 'name' => 'Sample 2' ]
-        ])->create();
+        )->create();
 
         $this
             ->actingAs($user)

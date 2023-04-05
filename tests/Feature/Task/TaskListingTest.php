@@ -33,7 +33,7 @@ class TaskListingTest extends TestCase
 
         $board = Board::factory()->recycle($user)->create();
 
-        $tasks = Task::factory()->recycle($board)->recycle($user)->count(2)->sequence([
+        $tasks = Task::factory()->recycle($board)->recycle($user)->count(2)->sequence(
             [
                 'name' => 'Sample 1',
                 'description' => 'Description 1',
@@ -46,27 +46,26 @@ class TaskListingTest extends TestCase
                 'deadline' => '2022-02-02 00:00:00',
                 'status' => TaskStatus::COMPLETED
             ],
-        ])->create();
+        )->create();
 
         $this
             ->actingAs($user)
             ->getJson("/api/tasks?board_id={$board->id}")
             ->assertOk()
-            ->dump()
             ->assertJson([
                 [
                     'id' => $tasks[0]->id,
                     'name' => 'Sample 1',
                     'description' => 'Description 1',
-                    'deadline' => '2021-01-01 00:00:00',
-                    'status' => TaskStatus::TODO
+                    'deadline' => '2021-01-01T00:00:00.000000Z',
+                    'status' => TaskStatus::TODO->value
                 ],
                 [
                     'id' => $tasks[1]->id,
                     'name' => 'Sample 2',
                     'description' => 'Description 2',
-                    'deadline' => '2022-02-02 00:00:00',
-                    'status' => TaskStatus::COMPLETED
+                    'deadline' => '2022-02-02T00:00:00.000000Z',
+                    'status' => TaskStatus::COMPLETED->value
                 ]
             ]);
     }

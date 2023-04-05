@@ -17,14 +17,15 @@ class ProjectListingTest extends TestCase
 
     public function test_user_can_list_their_projects_among_all_projects()
     {
+        $this->withoutExceptionHandling();
         $user = User::factory()->create();
 
         Project::factory()->count(3)->create();
 
-        $projects = Project::factory()->count(2)->sequence([
+        $projects = Project::factory()->count(2)->sequence(
             [ 'name' => 'Sample 1' ],
             [ 'name' => 'Sample 2' ]
-        ])->forCreator($user)->create();
+        )->recycle($user)->create();
 
         $this
             ->actingAs($user)
