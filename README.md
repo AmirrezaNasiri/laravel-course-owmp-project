@@ -9,3 +9,5 @@ The project is similar to Trello - an online task management system.
 Find the related documents at [docs](./docs) directory.
 
 ## Feature Started
+
+## New Started Profile changes
